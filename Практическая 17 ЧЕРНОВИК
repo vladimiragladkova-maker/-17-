@@ -339,3 +339,20 @@ for (int y = size - 1; y >= 0; y--)
     }
     cout << endl;
 }
+cout << endl;
+for (int y = size - 1; y >= 0; y--)
+{
+    for (int x = 0; x < size; x++)
+    {
+        // Условия для перевернутого треугольника
+        if (x >= size - 1 - y && x <= y && y >= size / 2)
+        {
+            cout << material;
+        }
+        else
+        {
+            cout << " ";
+        }
+    }
+    cout << endl;
+}
