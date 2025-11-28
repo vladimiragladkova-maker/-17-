@@ -273,28 +273,15 @@ int main() {
 		cin >> material;
 		cout << endl;
 		system("cls");
-
-		for (int y = 0; y < size; y++)
+		for (int y = size; y >= 0; y--)
 		{
-			for (int x = 0; x < size; x++)
+			if (y == 0)
 			{
-				if (x == size / 2 - y)
-				{
-					cout << material;
-				}
-				else
-				{
-					cout << " ";
-				}
+				break;
 			}
-			cout << endl;
-		}
-		cout << endl;
-		for (int y = 0; y < size; y++)
-		{
 			for (int x = 0; x < size; x++)
 			{
-				if (x == y - size / 2)
+				if (x == size / 2 - y || x == size / 2 + y)
 				{
 					cout << material;
 				}
@@ -309,7 +296,7 @@ int main() {
 		{
 			for (int x = 0; x < size; x++)
 			{
-				if (x == size / 2 - y or (x == size / 2 + y and x != size / 2 - y))
+				if (x == size / 2 - y || x == size / 2 + y)
 				{
 					cout << material;
 				}
@@ -322,37 +309,4 @@ int main() {
 		}
 	}
 	return 0;
-}
-// Перевернутый треугольник:
-for (int y = size - 1; y >= 0; y--)
-{
-    for (int x = 0; x < size; x++)
-    {
-        if (x == size / 2 - y || x == size / 2 + y || y == size / 2)
-        {
-            cout << material;
-        }
-        else
-        {
-            cout << " ";
-        }
-    }
-    cout << endl;
-}
-cout << endl;
-for (int y = size - 1; y >= 0; y--)
-{
-    for (int x = 0; x < size; x++)
-    {
-        // Условия для перевернутого треугольника
-        if (x >= size - 1 - y && x <= y && y >= size / 2)
-        {
-            cout << material;
-        }
-        else
-        {
-            cout << " ";
-        }
-    }
-    cout << endl;
 }
